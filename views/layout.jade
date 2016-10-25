@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title John Garcia | Web Portfolio
+    link(rel='stylesheet', href='/stylesheets/foundation.css' type='text/css')
+    link(href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', type='text/css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat')
+    link(rel='stylesheet', href='/style.css', type='text/css')
+  body
+    .off-canvas-wrapper
+      .off-canvas-wrapper-inner(data-off-canvas-wrapper)
+        .row.nav-row
+          .title-bar.small-12.columns(data-responsive-toggle='widemenu', data-hide-for='extra-large')
+            .title-bar-right
+              button.menu-icon(type='button', data-open='offCanvasRight')
+        // off-canvas right menu
+        #offCanvasRight.off-canvas.position-right(data-off-canvas='', data-position='right')
+          ul.vertical.dropdown.menu(data-dropdown-menu='')
+            li
+              a(href='right_item_1') Right item 1
+            li
+              a(href='right_item_2') Right item 2
+            li
+              a(href='right_item_3') Right item 3
+        // original content goes in this container
+        .off-canvas-content(data-off-canvas-content='')
+          block content
+          script(src='/js/jquery.js')
+          script(src='/js/foundation.js')
+          script $(document).foundation();
+      footer
+        .row
+          p © John Garcia 2016

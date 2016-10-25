@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johngarcia9110/portfolio-design.git"
+  },
+  "author": "John Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johngarcia9110/portfolio-design/issues"
+  },
+  "homepage": "https://github.com/johngarcia9110/portfolio-design#readme",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "^4.14.0",
+    "express-messages": "*",
+    "express-session": "^1.14.1",
+    "express-validator": "*",
+    "jade": "*",
+    "node-sass-middleware": "^0.9.8",
+    "nodemailer": "*"
+  },
+  "devDependencies": {}
+}

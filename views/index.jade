@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  section#jumbotron
+    .row
+      .small-12.columns
+        .jumbo-text
+          h1 JOHN GARCIA
+          p FRONT END DEVELOPER
+          ul.social-list
+            li
+              a(href='#')
+                i.fa.fa-github(aria-hidden='true')
+            li
+              a(href='#')
+                i.fa.fa-codepen(aria-hidden='true')
+            li
+              a(href='#')
+                i.fa.fa-linkedin(aria-hidden='true')
+  section#overview
+    .header-text
+      .row
+        .small-8.columns
+          h3 I'm a hungry front end dev looking for new challenges..
+        .small-4.columns
+          a.btn(href="#") Learn More
+    .row
+      .small-6.columns.projects
+        .project-image(style="background: gray")
+          img(src="", alt="")
+        .project-image(style="background: lightgray")
+          img(src="", alt="")
+        .project-image(style="background: slategray")
+          img(src="", alt="")
+        .project-image.more-btn
+          p View Work
+      .small-6.columns.contact
+        img(src="/images/Manhattan.PNG", alt="")
+        .contact-me.more-btn
+          P Get In Touch
+        
+    

@@ -1,0 +1,167 @@
+body {
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #000f08), color-stop(100%, #0b3954));
+  font-size: 75%;
+  color: #CCDBDC;
+  position: relative;
+  height: 100%;
+}
+
+body ul {
+  list-style: none;
+}
+
+body footer {
+  width: 100%;
+}
+
+body footer p {
+  text-align: center;
+  margin: 2px;
+}
+
+body section {
+  width: 100%;
+}
+
+.off-canvas-wrapper-inner .nav-row, .off-canvas-wrapper-inner .title-bar {
+  background: transparent;
+}
+
+.logo {
+  width: 70px;
+  margin-right: 15px;
+}
+
+.off-canvas-content, .off-canvas-content {
+  box-shadow: none;
+  background: transparent;
+}
+
+.off-canvas-wrapper {
+  height: 100%;
+}
+
+#jumbotron {
+  font-family: "Montserrat", sans-serif;
+  color: #CCDBDC;
+  text-align: center;
+  padding-top: 15em;
+}
+
+#jumbotron img {
+  max-width: 160px;
+  padding-bottom: 20px;
+}
+
+#jumbotron h1 {
+  font-size: 2.5em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  display: inline-block;
+}
+
+#jumbotron p {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+#jumbotron .jumbo-text {
+  text-align: left;
+  margin-left: 3em;
+}
+
+#jumbotron ul {
+  margin: 0 0 3em 0;
+  float: left;
+  display: block;
+  width: 100%;
+}
+
+#jumbotron ul .list-title {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+#jumbotron ul li {
+  display: inline-block;
+  float: left;
+  margin: 5px 16px;
+}
+
+#jumbotron ul li:first-child {
+  margin-left: 0;
+}
+
+#jumbotron ul li a {
+  color: #CCDBDC;
+  font-size: 2em;
+}
+
+#overview {
+  background: rgba(204, 219, 220, 0.48);
+}
+
+#overview .header-text {
+  background: #0B3954;
+  padding: 10px;
+}
+
+#overview .header-text h3 {
+  font-size: 1em;
+}
+
+#overview .btn {
+  color: #CCDBDC;
+  border: 1px solid #CCDBDC;
+  border-radius: 20px;
+  padding: 10px 15px;
+  text-align: center;
+  display: block;
+}
+
+#overview .projects {
+  padding: 0px;
+}
+
+#overview .project-image {
+  height: 100px;
+  border-radius: 2px;
+  width: 50%;
+  float: left;
+  background: #CCDBDC;
+}
+
+#overview .more-btn {
+  position: relative;
+  background: #9AD1D4;
+  z-index: 2;
+  box-shadow: 0 0 50px #0B3954;
+}
+
+#overview .more-btn p {
+  color: #0B3954;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 40px;
+}
+
+#overview .contact {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  padding: 0;
+}
+
+#overview .contact img {
+  height: 100%;
+}
+
+#overview .contact .contact-me {
+  height: 100px;
+  width: 50%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #CCDBDC;
+}
