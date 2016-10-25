@@ -20,17 +20,19 @@ html(lang='en')
         #offCanvasRight.off-canvas.position-right(data-off-canvas='', data-position='right')
           ul.vertical.dropdown.menu(data-dropdown-menu='')
             li
-              a(href='right_item_1') Right item 1
+              a(href='/') HOME
             li
-              a(href='right_item_2') Right item 2
+              a(href='/about') ABOUT ME
             li
-              a(href='right_item_3') Right item 3
+              a(href='/projects') MY WORK
+            li
+              a(href='/contact') CONTACT
         // original content goes in this container
         .off-canvas-content(data-off-canvas-content='')
           block content
           script(src='/js/jquery.js')
           script(src='/js/foundation.js')
           script $(document).foundation();
-      footer
-        .row
-          p © John Garcia 2016
+          footer
+            .row
+              p © John Garcia 2016
