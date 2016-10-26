@@ -21,15 +21,29 @@ html(lang='en')
               button.menu-icon(type='button', data-open='offCanvasRight')
         // off-canvas right menu
         #offCanvasRight.off-canvas.position-right(data-off-canvas='', data-position='right')
-          ul.vertical.dropdown.menu(data-dropdown-menu='')
-            li
-              a(href='/') HOME
-            li
-              a(href='/about') ABOUT ME
-            li
-              a(href='/projects') MY WORK
-            li
-              a(href='/contact') CONTACT
+          img(src='http://placehold.it/200x200')
+          h2 JOHN GARCIA
+          .nav-links
+            ul.social-list
+              li
+                a(href='#')
+                  i.fa.fa-github(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-codepen(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-linkedin(aria-hidden='true')
+            hr
+            ul.vertical.dropdown.menu(data-dropdown-menu='')
+              li
+                a(href='/') HOME
+              li
+                a(href='/about') ABOUT ME
+              li
+                a(href='/projects') MY WORK
+              li
+                a(href='/contact') CONTACT
         // original content goes in this container
         .off-canvas-content(data-off-canvas-content='')
           block content
@@ -38,5 +52,6 @@ html(lang='en')
           script(src='/js/page.js')
           script $(document).foundation();
           footer
+            p.scrollToTop Scroll To Top
             .row
               p © John Garcia 2016

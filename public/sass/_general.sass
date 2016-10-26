@@ -23,6 +23,14 @@ body
   section
     width: 100%
 
+.scrollToTop
+  position: fixed
+  bottom: 10px
+  right: 10px
+  display: none
+  background: white
+  color: $black
+
 .cta
   padding: 0
   background: #136a89
@@ -74,6 +82,7 @@ body
     svg
       font: 3em "Montserrat", sans-serif
       margin: 0
+      width: 100%
   ul
     margin: 0 0 3em 0
     float: left
@@ -83,21 +92,28 @@ body
     .list-title
       font-size: 1.5em
       line-height: 2em
-    li
-      display: inline-block
-      float: left
-      margin: 5px 16px
-      &:first-child
-        margin-left: 0
-      a
-        color: $white
-        font-size: 2em
+.social-list
+  li
+    display: inline-block
+    float: left
+    margin: 5px 16px
+    &:first-child
+      margin-left: 0
+    a
+      color: $white
+      font-size: 2em
 
 #overview
-  background: rgba(204, 219, 220, 0.48)
+  position: relative
+  background: green
+  .overview-content
+    position: relative
+
+    top: -20px
   .header-text
-    background: $blue
-    padding: 10px
+    .row
+      padding: 10px
+      background: $blue
     h3
       font-size: 1em
   .btn
@@ -105,7 +121,9 @@ body
     border: 1px solid $white
     border-radius: 20px
     padding: 10px 15px
+    max-width: 60%
     text-align: center
+    margin: auto
     display: block
   .projects
     padding: 0px
@@ -121,11 +139,11 @@ body
       padding-top: 40px
   .contact
     position: relative
-    height: 200px
     overflow: hidden
     padding: 0
     img
       height: 100%
+
     .contact-me
       height: 100px
       width: 50%
@@ -139,3 +157,13 @@ body
   width: 50%
   float: left
   background: $white
+
+@media screen and (min-width: 415px)
+  body
+    font-size: 100%
+
+  #jumbotron
+    .jumbo-text
+      margin-left: 0
+      svg
+        font: 5em "Montserrat", sans-serif

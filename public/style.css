@@ -25,6 +25,15 @@ body section {
   width: 100%;
 }
 
+.scrollToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  background: white;
+  color: #000F08;
+}
+
 .cta {
   padding: 0;
   background: #136a89;
@@ -96,6 +105,7 @@ body section {
 #jumbotron .jumbo-text svg {
   font: 3em "Montserrat", sans-serif;
   margin: 0;
+  width: 100%;
 }
 
 #jumbotron ul {
@@ -110,28 +120,34 @@ body section {
   line-height: 2em;
 }
 
-#jumbotron ul li {
+.social-list li {
   display: inline-block;
   float: left;
   margin: 5px 16px;
 }
 
-#jumbotron ul li:first-child {
+.social-list li:first-child {
   margin-left: 0;
 }
 
-#jumbotron ul li a {
+.social-list li a {
   color: #CCDBDC;
   font-size: 2em;
 }
 
 #overview {
-  background: rgba(204, 219, 220, 0.48);
+  position: relative;
+  background: green;
 }
 
-#overview .header-text {
-  background: #0B3954;
+#overview .overview-content {
+  position: relative;
+  top: -20px;
+}
+
+#overview .header-text .row {
   padding: 10px;
+  background: #0B3954;
 }
 
 #overview .header-text h3 {
@@ -143,7 +159,9 @@ body section {
   border: 1px solid #CCDBDC;
   border-radius: 20px;
   padding: 10px 15px;
+  max-width: 60%;
   text-align: center;
+  margin: auto;
   display: block;
 }
 
@@ -167,7 +185,6 @@ body section {
 
 #overview .contact {
   position: relative;
-  height: 200px;
   overflow: hidden;
   padding: 0;
 }
@@ -191,6 +208,18 @@ body section {
   width: 50%;
   float: left;
   background: #CCDBDC;
+}
+
+@media screen and (min-width: 415px) {
+  body {
+    font-size: 100%;
+  }
+  #jumbotron .jumbo-text {
+    margin-left: 0;
+  }
+  #jumbotron .jumbo-text svg {
+    font: 5em "Montserrat", sans-serif;
+  }
 }
 
 .page-title {
@@ -224,11 +253,13 @@ body section {
 }
 
 .project {
-  background: #CCDBDC;
+  background: #fff;
   text-align: center;
   margin-bottom: 20px;
   border-radius: 10px;
   overflow: hidden;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
 }
 
 .project .project-header {
@@ -242,6 +273,9 @@ body section {
   width: 100%;
   height: 100%;
   opacity: 0.6;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .project .project-header .img-wrapper .p-preview-image {
@@ -249,36 +283,39 @@ body section {
   background-size: contain;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
 }
 
 .project h2 {
-  color: #000F08;
+  color: #fff;
   position: absolute;
   bottom: 0;
   left: 10px;
   margin-bottom: 0;
   font-weight: bold;
-  background: #CCDBDC;
   padding: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
 .project a {
-  color: #CCDBDC;
+  color: #fff;
   background: #136a89;
-  padding: 20px 20px;
+  padding: 14px 20px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   position: absolute;
-  bottom: 10px;
+  bottom: -20px;
   right: 10px;
   border-radius: 10px;
+  box-shadow: 0 0 27px -8px black;
 }
 
 .project .p-desc {
   color: #000F08;
-  padding: 40px 0;
+  padding: 40px 10px;
 }
 
 svg {
@@ -326,4 +363,50 @@ svg {
   100% {
     stroke-dashoffset: -35%;
   }
+}
+
+#offCanvasRight {
+  height: 100%;
+  background: #000F08;
+}
+
+#offCanvasRight h2 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+#offCanvasRight img {
+  border-radius: 50%;
+  display: block;
+  max-width: 150px;
+  margin: 10px auto;
+}
+
+#offCanvasRight .nav-links ul {
+  text-align: center;
+  margin: 0;
+}
+
+#offCanvasRight .nav-links ul li a {
+  color: white;
+  font-weight: bold;
+}
+
+#offCanvasRight .nav-links .social-list::after {
+  clear: both;
+}
+
+#offCanvasRight .nav-links .social-list li {
+  float: none;
+}
+
+#offCanvasRight .nav-links .social-list li:first-child {
+  margin-left: 16px;
+}
+
+#offCanvasRight .nav-links .menu.vertical li {
+  background: #0B3954;
+  max-width: 80%;
+  margin: 10px auto;
 }

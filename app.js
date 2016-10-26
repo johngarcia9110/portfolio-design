@@ -37,6 +37,10 @@ app.get('/contact', function(req, res){
   res.render('contact');
 });
 
+app.get('/project/project-template', function(req, res){
+  res.render('project/project-template');
+});
+
 
 http.listen(4000, function(){
   console.log('listen on port: 3000');
