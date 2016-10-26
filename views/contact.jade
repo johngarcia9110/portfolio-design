@@ -1,4 +1,13 @@
 extends layout
 block content
-  h1 Let's Get In Touch!
+  .page-title
+    svg
+      symbol#s-text
+        text(text-anchor='middle' x='50%' y='80%') CONTACT ME
+      g.g-ants
+        use.text-copy(xlink:href='#s-text')
+        use.text-copy(xlink:href='#s-text')
+        use.text-copy(xlink:href='#s-text')
+        use.text-copy(xlink:href='#s-text')
+        use.text-copy(xlink:href='#s-text')
   .row

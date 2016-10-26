@@ -1,8 +1,17 @@
 extends layout
 block content
-  h1.page-title Some Of My Work:
+  .page-title
+    svg
+      symbol#s-text
+        text(text-anchor='middle' x='50%' y='80%') MY WORK
+      g.g-ants
+        use.text-copy(xlink:href='#s-text')
+        use.text-copy(xlink:href='#s-text')
+        use.text-copy(xlink:href='#s-text')
+        use.text-copy(xlink:href='#s-text')
+        use.text-copy(xlink:href='#s-text')
   .row
-    .small-12.columns
+    .small-12.medium-6.large-4.columns
       .project
         .project-header
           .img-wrapper
@@ -10,8 +19,8 @@ block content
           h2 Project Title
           a.view-p-link(href="#") View Project
         .p-desc
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, repudiandae aliquid assumenda laborum mollitia neque. 
-    .small-12.columns
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, repudiandae aliquid assumenda laborum mollitia neque.
+    .small-12.medium-6.large-4.columns
       .project
         .project-header
           .img-wrapper
@@ -19,8 +28,8 @@ block content
           h2 Project Title
           a.view-p-link(href="#") View Project
         .p-desc
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, repudiandae aliquid assumenda laborum mollitia neque. 
-    .small-12.columns
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, repudiandae aliquid assumenda laborum mollitia neque.
+    .small-12.medium-6.large-4.columns
       .project
         .project-header
           .img-wrapper
@@ -28,4 +37,4 @@ block content
           h2 Project Title
           a.view-p-link(href="#") View Project
         .p-desc
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, repudiandae aliquid assumenda laborum mollitia neque. 
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, repudiandae aliquid assumenda laborum mollitia neque.

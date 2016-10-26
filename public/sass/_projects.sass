@@ -1,3 +1,29 @@
+.page-title
+  background: $blue
+  padding-bottom: 1px
+  margin-bottom: 20px
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    width: 20px
+    height: 10px
+    bottom: -10px
+    left: 50%
+    margin-left: -10px
+    display: block
+    border-top: 10px solid $blue
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+  .text-copy
+    fill: $white
+    fill-opacity: 0.2
+    stroke-dasharray: 2% 7%
+    stroke-width: 6px
+    stroke-dashoffset: 0%
+    animation: stroke-offset 41.5s infinite linear
+
+
 .project
   background: $white
   text-align: center

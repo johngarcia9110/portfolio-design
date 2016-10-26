@@ -72,6 +72,11 @@ body section {
   margin-left: 3em;
 }
 
+#jumbotron .jumbo-text svg {
+  font: 3em "Montserrat", sans-serif;
+  margin: 0;
+}
+
 #jumbotron ul {
   margin: 0 0 3em 0;
   float: left;
@@ -167,6 +172,36 @@ body section {
   background: #CCDBDC;
 }
 
+.page-title {
+  background: #0B3954;
+  padding-bottom: 1px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -10px;
+  display: block;
+  border-top: 10px solid #0B3954;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.page-title .text-copy {
+  fill: #CCDBDC;
+  fill-opacity: 0.2;
+  stroke-dasharray: 2% 7%;
+  stroke-width: 6px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 41.5s infinite linear;
+}
+
 .project {
   background: #CCDBDC;
   text-align: center;
@@ -223,4 +258,51 @@ body section {
 .project .p-desc {
   color: #000F08;
   padding: 40px 0;
+}
+
+svg {
+  display: block;
+  font: 4.5em "Montserrat", sans-serif;
+  height: 100px;
+  margin: 0 auto 20px auto;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 3px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+  stroke: #80CED7;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+  stroke: #9AD1D4;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+  stroke: #136a89;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+  stroke: #136a89;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+  stroke: #12aab7;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
 }

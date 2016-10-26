@@ -5,7 +5,15 @@ block content
     .row
       .small-12.columns
         .jumbo-text
-          h1 JOHN GARCIA
+          svg
+            symbol#s-text
+              text(text-anchor='middle' x='45%' y='80%') JOHN GARCIA
+            g.g-ants
+              use.text-copy(xlink:href='#s-text')
+              use.text-copy(xlink:href='#s-text')
+              use.text-copy(xlink:href='#s-text')
+              use.text-copy(xlink:href='#s-text')
+              use.text-copy(xlink:href='#s-text')
           p FRONT END DEVELOPER
           ul.social-list
             li
@@ -20,9 +28,9 @@ block content
   section#overview
     .header-text
       .row
-        .small-8.columns
+        .small-8.large-10.columns
           h3 I'm a hungry front end dev looking for new challenges..
-        .small-4.columns
+        .small-4.large-2.columns
           a.btn(href="/about") Learn More
     .row
       .small-6.columns.projects
@@ -32,11 +40,11 @@ block content
           img(src="", alt="")
         .project-image(style="background: slategray")
           img(src="", alt="")
-        .project-image.more-btn
-          p View Work
+        a(href='/projects')
+          .project-image.more-btn
+            p View Work
       .small-6.columns.contact
         img(src="/images/Manhattan.PNG", alt="")
-        .contact-me.more-btn
-          P Get In Touch
-        
-    
+        a(href='/contact')
+          .contact-me.more-btn
+            P Get In Touch
