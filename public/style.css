@@ -25,6 +25,27 @@ body section {
   width: 100%;
 }
 
+.cta {
+  padding: 0;
+  background: #136a89;
+  text-align: center;
+}
+
+.cta .columns {
+  padding: 0;
+}
+
+.cta .left-cta {
+  border-right: 2px solid #0B3954;
+}
+
+.cta a {
+  color: #e6e6e6;
+  padding: 20px;
+  width: 100%;
+  display: block;
+}
+
 .off-canvas-wrapper-inner .nav-row, .off-canvas-wrapper-inner .title-bar {
   background: transparent;
 }
@@ -173,7 +194,7 @@ body section {
 }
 
 .page-title {
-  background: #0B3954;
+  background: #136a89;
   padding-bottom: 1px;
   margin-bottom: 20px;
   position: relative;
@@ -188,7 +209,7 @@ body section {
   left: 50%;
   margin-left: -10px;
   display: block;
-  border-top: 10px solid #0B3954;
+  border-top: 10px solid #136a89;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 }
@@ -244,8 +265,8 @@ body section {
 }
 
 .project a {
-  color: #0B3954;
-  background: #80CED7;
+  color: #CCDBDC;
+  background: #136a89;
   padding: 20px 20px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
