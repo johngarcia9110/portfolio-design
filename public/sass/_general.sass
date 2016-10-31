@@ -1,13 +1,16 @@
-$blue: #0B3954
+$blue: #0d6c81
 $black: #000F08
 $white: #CCDBDC
 $light-teal: #9AD1D4
 $teal: #80CED7
 $main-font: 'Montserrat', sans-serif
 
+// Blue: #0d6c81
+// Red: #540B15
+
 body
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0,15,8,1)), color-stop(100%, rgba(11,57,84,1)))
-  font-size: 75%
+  font-size: 30px
   color: $white
   position: relative
   height: 100%
@@ -45,13 +48,15 @@ body
     width: 100%
     display: block
 
-
+.menu-btn
+  font-size: 45px
+  margin: 20px
 
 .off-canvas-wrapper-inner
   .nav-row, .title-bar
       background: transparent
 .logo
-  width: 70px
+  width: 150px
   margin-right: 15px
 .off-canvas-content, .off-canvas-content
   box-shadow: none
@@ -64,12 +69,12 @@ body
   font-family: $main-font
   color: $white
   text-align: center
-  padding-top: 15em
+  padding-top: 40vh
   img
     max-width: 160px
     padding-bottom: 20px
   h1
-    font-size: 2.5em
+    font-size: 4.5em
     font-family: $main-font
     font-weight: bold
     display: inline-block
@@ -104,15 +109,10 @@ body
       font-size: 2em
 
 #overview
-  position: relative
-  background: green
   .overview-content
-    position: relative
-
-    top: -20px
   .header-text
     .row
-      padding: 10px
+      padding: 25px
       background: $blue
     h3
       font-size: 1em
@@ -132,38 +132,91 @@ body
     background: $light-teal
     z-index: 2
     box-shadow: 0 0 50px $blue
+    display: flex
+    align-items: center
+    justify-content: center
+    &:hover
+      animation-name: pop
+      animation-duration: 200ms
+      animation-fill-mode: forwards
     p
       color: $blue
-      text-align: center
       font-weight: bold
-      padding-top: 40px
-  .contact
-    position: relative
-    overflow: hidden
-    padding: 0
-    img
+      text-align: center
+      i
+        padding: 20px
+        border-radius: 50%
+        border: 5px solid $blue
+        margin-bottom: 15px
+
+
+
+
+  .details-section
+    height: 580px
+    .contact
+      position: relative
+      overflow: hidden
+      padding: 0
       height: 100%
+      background: url(/images/location-map1.png)
+      background-repeat: no-repeat
+      background-size: cover
+      img
+        height: 100%
 
-    .contact-me
-      height: 100px
-      width: 50%
-      display: block
-      position: absolute
-      left: 0
-      bottom: 0
-      background: $white
-.project-image
-  height: 100px
-  width: 50%
-  float: left
-  background: $white
+      .contact-me
+        height: 50%
+        width: 50%
+        position: absolute
+        left: 0
+        bottom: 0
+        background: #ffffff
+    .projects
+      height: 100%
+  .project-image
+    height: 100px
+    width: 50%
+    height: 50%
+    float: left
+    background: $white
 
-@media screen and (min-width: 415px)
+.off-canvas.position-right
+  right: -480px
+  top: 0
+  width: 480px
+.is-open-right
+  transform: translateX(-480px)
+
+
+@keyframes pop
+  0%
+    transform: scale(1)
+
+  100%
+    transform: scale(0.9)
+
+
+@media only screen and (max-width: 415px)
   body
-    font-size: 100%
+    font-size: 75%
+.logo
+  width: 80px
+.menu-btn
+    font-size: 35px
+    margin: 10px
 
+#overview
+  .details-section
+    height: 220px
   #jumbotron
     .jumbo-text
       margin-left: 0
       svg
         font: 5em "Montserrat", sans-serif
+.off-canvas.position-right
+  right: -250px
+  top: 0
+  width: 250px
+.is-open-right
+  transform: translateX(-250px)
