@@ -91,7 +91,7 @@ body section {
 }
 
 #jumbotron h1 {
-  font-size: 4.5em;
+  font-size: 2.5em;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   display: inline-block;
@@ -152,9 +152,10 @@ body section {
 #overview .btn {
   color: #CCDBDC;
   border: 1px solid #CCDBDC;
+  background: #32566b;
   border-radius: 20px;
   padding: 10px 15px;
-  max-width: 60%;
+  max-width: 300px;
   text-align: center;
   margin: auto;
   display: block;
@@ -194,7 +195,7 @@ body section {
 }
 
 #overview .details-section {
-  height: 580px;
+  height: 220px;
 }
 
 #overview .details-section .contact {
@@ -267,7 +268,7 @@ body section {
 }
 
 #overview .details-section {
-  height: 220px;
+  height: 400px;
 }
 
 #overview #jumbotron .jumbo-text {
@@ -469,6 +470,10 @@ svg {
 
 #offCanvasRight .nav-links .social-list li:first-child {
   margin-left: 16px;
+}
+
+#offCanvasRight .nav-links .social-list li a {
+  font-size: 1em;
 }
 
 #offCanvasRight .nav-links .menu.vertical li {
