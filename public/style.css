@@ -1,9 +1,27 @@
+.light {
+  background: #CCDBDC;
+  padding: 20px;
+  color: black;
+}
+
+.dark {
+  background: #000F08;
+}
+
+.transparent {
+  background: transparent;
+}
+
 body {
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #000f08), color-stop(100%, #0b3954));
   font-size: 30px;
   color: #CCDBDC;
   position: relative;
   height: 100%;
+}
+
+body h1, body h2, body h3, body h4, body p, body a {
+  font-family: "Montserrat", sans-serif;
 }
 
 body ul {
@@ -56,22 +74,25 @@ body section {
 }
 
 .menu-btn {
-  font-size: 45px;
-  margin: 20px;
+  font-size: 35px;
+  margin: 10px;
 }
 
-.off-canvas-wrapper-inner .nav-row, .off-canvas-wrapper-inner .title-bar {
+.off-canvas-wrapper-inner .title-bar {
   background: transparent;
 }
 
 .logo {
-  width: 150px;
-  margin-right: 15px;
+  width: 80px;
+}
+
+.menu-btn {
+  font-size: 35px;
+  margin: 10px;
 }
 
 .off-canvas-content, .off-canvas-content {
   box-shadow: none;
-  background: transparent;
 }
 
 .off-canvas-wrapper {
@@ -104,7 +125,6 @@ body section {
 
 #jumbotron .jumbo-text {
   text-align: left;
-  margin-left: 3em;
 }
 
 #jumbotron .jumbo-text svg {
@@ -140,13 +160,24 @@ body section {
   font-size: 2em;
 }
 
-#overview .header-text .row {
-  padding: 25px;
+#overview .overview-content {
   background: #0d6c81;
 }
 
+#overview .header-text .text-cta {
+  margin: auto;
+}
+
+#overview .header-text .row {
+  padding: 40px 0 120px 0;
+  background: #0d6c81;
+  text-align: center;
+}
+
 #overview .header-text h3 {
-  font-size: 1em;
+  font-size: 30px;
+  margin-right: 20px;
+  line-height: 67px;
 }
 
 #overview .btn {
@@ -156,9 +187,11 @@ body section {
   border-radius: 20px;
   padding: 10px 15px;
   max-width: 300px;
-  text-align: center;
   margin: auto;
+  text-align: center;
   display: block;
+  animation: bob 2s ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 #overview .projects {
@@ -196,6 +229,7 @@ body section {
 
 #overview .details-section {
   height: 220px;
+  box-shadow: 0px -32px 32px -32px #093248;
 }
 
 #overview .details-section .contact {
@@ -234,13 +268,13 @@ body section {
 }
 
 .off-canvas.position-right {
-  right: -480px;
+  right: -250px;
   top: 0;
-  width: 480px;
+  width: 250px;
 }
 
 .is-open-right {
-  transform: translateX(-480px);
+  transform: translateX(-250px);
 }
 
 @keyframes pop {
@@ -259,16 +293,17 @@ body section {
 }
 
 .logo {
-  width: 80px;
+  width: 150px;
+  margin-right: 15px;
 }
 
 .menu-btn {
-  font-size: 35px;
-  margin: 10px;
+  font-size: 45px;
+  margin: 20px;
 }
 
 #overview .details-section {
-  height: 400px;
+  height: 600px;
 }
 
 #overview #jumbotron .jumbo-text {
@@ -280,20 +315,34 @@ body section {
 }
 
 .off-canvas.position-right {
-  right: -250px;
+  right: -480px;
   top: 0;
-  width: 250px;
+  width: 480px;
 }
 
 .is-open-right {
-  transform: translateX(-250px);
+  transform: translateX(-480px);
+}
+
+@keyframes bob {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+    box-shadow: 0 10px 0 -10px black;
+  }
 }
 
 .page-title {
   background: #136a89;
-  padding: 20px;
-  margin-bottom: 20px;
+  max-width: 600px;
+  padding: 20px 40px;
+  margin: 80px auto;
+  text-align: center;
   position: relative;
+  border-radius: 8px;
+  color: white;
 }
 
 .page-title::after {
@@ -322,7 +371,7 @@ body section {
 .project {
   background: #fff;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   border-radius: 10px;
   overflow: hidden;
   border-top-left-radius: 11px;
@@ -330,16 +379,15 @@ body section {
 }
 
 .project .project-header {
-  height: 200px;
+  height: 380px;
   position: relative;
   z-index: 0;
 }
 
 .project .project-header .img-wrapper {
-  background: #CCDBDC;
+  background: rgba(19, 106, 137, 0.52);
   width: 100%;
   height: 100%;
-  opacity: 0.6;
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -351,6 +399,8 @@ body section {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: relative;
+  z-index: -1;
   border-top-left-radius: 11px;
   border-top-right-radius: 11px;
 }
@@ -358,8 +408,10 @@ body section {
 .project h2 {
   color: #fff;
   position: absolute;
-  bottom: 0;
-  left: 10px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -37px;
   margin-bottom: 0;
   font-weight: bold;
   padding: 10px;
@@ -369,15 +421,15 @@ body section {
 
 .project a {
   color: #fff;
-  background: #136a89;
+  background: #3bd472;
   padding: 14px 20px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   position: absolute;
-  bottom: -20px;
+  bottom: 0;
   right: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 27px -8px black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .project .p-desc {

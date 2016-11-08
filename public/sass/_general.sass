@@ -7,6 +7,15 @@ $main-font: 'Montserrat', sans-serif
 
 // Blue: #0d6c81
 // Red: #540B15
+.light
+  background: $white
+  padding: 20px
+  color: black
+.dark
+  background: $black
+
+.transparent
+  background: transparent
 
 body
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0,15,8,1)), color-stop(100%, rgba(11,57,84,1)))
@@ -14,6 +23,8 @@ body
   color: $white
   position: relative
   height: 100%
+  h1, h2, h3, h4, p, a
+    font-family: $main-font
   ul
     list-style: none
   footer
@@ -49,18 +60,23 @@ body
     display: block
 
 .menu-btn
-  font-size: 45px
-  margin: 20px
+    font-size: 35px
+    margin: 10px
 
 .off-canvas-wrapper-inner
-  .nav-row, .title-bar
+    .title-bar
       background: transparent
+
+
 .logo
-  width: 150px
-  margin-right: 15px
+  width: 80px
+.menu-btn
+    font-size: 35px
+    margin: 10px
+
 .off-canvas-content, .off-canvas-content
   box-shadow: none
-  background: transparent
+
 
 .off-canvas-wrapper
   height: 100%
@@ -83,7 +99,6 @@ body
     margin-bottom: 0
   .jumbo-text
     text-align: left
-    margin-left: 3em
     svg
       font: 3em "Montserrat", sans-serif
       margin: 0
@@ -110,12 +125,19 @@ body
 
 #overview
   .overview-content
+    background: $blue
   .header-text
+    .text-cta
+      margin: auto
+
     .row
-      padding: 25px
+      padding: 40px 0 120px 0
       background: $blue
+      text-align: center
     h3
-      font-size: 1em
+      font-size: 30px
+      margin-right: 20px
+      line-height: 67px
   .btn
     color: $white
     border: 1px solid $white
@@ -123,9 +145,11 @@ body
     border-radius: 20px
     padding: 10px 15px
     max-width: 300px
-    text-align: center
     margin: auto
+    text-align: center
     display: block
+    animation: bob 2s ease-in-out
+    animation-iteration-count: infinite
   .projects
     padding: 0px
   .more-btn
@@ -155,6 +179,7 @@ body
 
   .details-section
     height: 220px
+    box-shadow: 0px -32px 32px -32px #093248
     .contact
       position: relative
       overflow: hidden
@@ -182,13 +207,13 @@ body
     float: left
     background: $white
 
-.off-canvas.position-right
-  right: -480px
-  top: 0
-  width: 480px
-.is-open-right
-  transform: translateX(-480px)
 
+.off-canvas.position-right
+  right: -250px
+  top: 0
+  width: 250px
+.is-open-right
+  transform: translateX(-250px)
 
 @keyframes pop
   0%
@@ -202,22 +227,32 @@ body
   body
     font-size: 75%
 .logo
-  width: 80px
-.menu-btn
-    font-size: 35px
-    margin: 10px
+  width: 150px
+  margin-right: 15px
 
+.menu-btn
+  font-size: 45px
+  margin: 20px
 #overview
   .details-section
-    height: 400px
+    height: 600px
   #jumbotron
     .jumbo-text
       margin-left: 0
       svg
         font: 5em "Montserrat", sans-serif
 .off-canvas.position-right
-  right: -250px
+  right: -480px
   top: 0
-  width: 250px
+  width: 480px
 .is-open-right
-  transform: translateX(-250px)
+  transform: translateX(-480px)
+
+
+@keyframes bob
+  0%
+    transform: translateY(0px)
+
+  50%
+    transform: translateY(10px)
+    box-shadow: 0 10px 0 -10px black

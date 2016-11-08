@@ -12,14 +12,15 @@ html(lang='en')
   body
     .off-canvas-wrapper
       .off-canvas-wrapper-inner(data-off-canvas-wrapper)
-        .row.nav-row
-          .title-bar.small-12.columns(data-responsive-toggle='widemenu', data-hide-for='extra-large')
-            .title-bar-left
-              a(href="/")
-                img.logo(src="/images/logo.svg")
-            .title-bar-right
-              button(type='button', data-open='offCanvasRight')
-                i.fa.fa-bars.menu-btn
+        .nav-wrapper(class="#{navStyle}")
+          .row.nav-row
+            .title-bar(class=" small-12 columns" data-responsive-toggle='widemenu', data-hide-for='extra-large')
+              .title-bar-left
+                a(href="/")
+                  img.logo(src="/images/logo.svg")
+              .title-bar-right
+                button(type='button', data-open='offCanvasRight')
+                  i.fa.fa-bars.menu-btn
         // off-canvas right menu
         #offCanvasRight.off-canvas.position-right(data-off-canvas='', data-position='right')
           img(src='http://placehold.it/200x200')
@@ -46,13 +47,9 @@ html(lang='en')
               li
                 a(href='/contact') CONTACT
         // original content goes in this container
-        .off-canvas-content(data-off-canvas-content='')
+        .off-canvas-content(class="#{bodyStyle}" data-off-canvas-content='')
           block content
           script(src='/js/jquery.js')
           script(src='/js/foundation.js')
           script(src='/js/page.js')
           script $(document).foundation();
-          footer
-            p.scrollToTop Scroll To Top
-            .row
-              p © John Garcia 2016

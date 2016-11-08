@@ -1,9 +1,13 @@
 .page-title
   background: #136a89
-  padding: 20px
-  margin-bottom: 20px
+  max-width: 600px
+  padding: 20px 40px
+  margin: 80px auto
+  text-align: center
   position: relative
-  
+  border-radius: 8px
+  color: white
+
   &::after
     content: ''
     position: absolute
@@ -28,21 +32,20 @@
 .project
   background: #fff
   text-align: center
-  margin-bottom: 20px
+  margin-bottom: 40px
   border-radius: 10px
   overflow: hidden
   border-top-left-radius: 11px
   border-top-right-radius: 11px
   .project-header
-    height: 200px
+    height: 380px
     position: relative
     z-index: 0
 
     .img-wrapper
-      background: $white
+      background: rgba(19, 106, 137, 0.52)
       width: 100%
       height: 100%
-      opacity: 0.6
       overflow: hidden
       border-top-left-radius: 10px
       border-top-right-radius: 10px
@@ -52,13 +55,17 @@
         width: 100%
         height: 100%
         overflow: hidden
+        position: relative
+        z-index: -1
         border-top-left-radius: 11px
         border-top-right-radius: 11px
   h2
     color: #fff
     position: absolute
-    bottom: 0
-    left: 10px
+    top: 50%
+    left: 0
+    right: 0
+    margin-top: -37px
     margin-bottom: 0
     font-weight: bold
     padding: 10px
@@ -66,15 +73,16 @@
     border-top-right-radius: 10px
   a
     color: #fff
-    background: #136a89
+    background: #3bd472
     padding: 14px 20px
     font-weight: bold
     font-family: $main-font
     position: absolute
-    bottom: -20px
+    bottom: 0
     right: 10px
-    border-radius: 10px
-    box-shadow: 0 0 27px -8px black
+    border-top-left-radius: 10px
+    border-top-right-radius: 10px
+
   .p-desc
     color: $black
     padding: 40px 10px

@@ -22,19 +22,31 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res){
-  res.render('index');
+  res.render('index', {
+    navStyle: 'transpNav',
+    bodyStyle: 'transparent'
+  });
 });
 
 app.get('/about', function(req, res){
-  res.render('about');
+  res.render('about', {
+    navStyle: 'dark',
+    bodyStyle: 'light'
+  });
 });
 
 app.get('/projects', function(req, res){
-  res.render('projects');
+  res.render('projects', {
+    navStyle: 'dark',
+    bodyStyle: 'light'
+  });
 });
 
 app.get('/contact', function(req, res){
-  res.render('contact');
+  res.render('contact', {
+    navStyle: 'dark',
+    bodyStyle: 'light'
+  });
 });
 
 app.get('/project/project-template', function(req, res){
